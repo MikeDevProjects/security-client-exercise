@@ -8,16 +8,16 @@
 //handler is called.
 const userInputInHTML = (input) => {
   const p = document.getElementById("pleaseNo")
-  // Bad
+  //! Bad
   p.innerHTML = input;
 
-  // Better
+  //* Better - SANITIZED INPUT
   // var textnode = document.createTextNode(input);
   // p.appendChild(textnode);
 }
 const sendToServer = () => {
   const input = document.querySelector('#userinput').value;
-  userInputInHTML(input)
+  userInputInHTML(input);
   fetch('http://localhost:3000/secret', {
     method: 'POST',
     body: JSON.stringify({userInput: input}),
