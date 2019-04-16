@@ -1,4 +1,3 @@
-:EMOJICODE:
 # security-client-exercise
 Run in conjunction with security-server-exercise repo
 
